@@ -41,6 +41,6 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          IMAGE_URI="us-central1-docker.pkg.dev/causal-galaxy-459115-v0/hcl-repository/order-service:${{ github.sha }}"
+          IMAGE_URI="us-central1-docker.pkg.dev/causal-galaxy-459115-v0/hcl-repository:${{ github.sha }}"
           docker build  -t "$IMAGE_URI" .
           docker push "$IMAGE_URI"
