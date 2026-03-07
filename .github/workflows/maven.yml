@@ -44,4 +44,4 @@ jobs:
           IMAGE_URI="us-central1-docker.pkg.dev/causal-galaxy-459115-v0/hcl-repository:${{ github.sha }}"
           docker build  -t "$IMAGE_URI" .
           docker push "$IMAGE_URI"
-          us-central1-docker.pkg.dev/causal-galaxy-459115-v0/hcl-repository
+
