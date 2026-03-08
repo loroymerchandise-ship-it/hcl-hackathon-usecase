@@ -37,11 +37,11 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
 
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev
+        run: gcloud auth configure-docker asia-south1-docker.pkg.dev
 
       - name: Build and Push Docker image
         run: |
-          IMAGE_URI="us-central1-docker.pkg.dev/causal-galaxy-459115-v0/hcl-repository:${{ github.sha }}"
+          IMAGE_URI="us-central1-docker.pkg.dev/causal-galaxy-459115-v0/top10news/order-service/javaimage:${{ github.sha }}"
           docker build  -t "$IMAGE_URI" .
           docker push "$IMAGE_URI"
 
