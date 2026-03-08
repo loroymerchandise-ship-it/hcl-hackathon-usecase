@@ -32,6 +32,7 @@ jobs:
         with:
           workload_identity_provider: 'projects/263386665758/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
           service_account: 'github-ci@causal-galaxy-459115-v0.iam.gserviceaccount.com'
+          token_format: access_token
 
       - name: Set up gcloud CLI
         uses: google-github-actions/setup-gcloud@v1
